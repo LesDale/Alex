@@ -86,6 +86,5 @@ class UserMessages extends Modules{
     protected function getME($field){
         return $this->db->getAllOnField("usermessages", $field, $_SESSION["user_id"],"","");
     }
-
 }
 ?>

@@ -111,31 +111,7 @@ class Manage{
 
 		}
 	}
-	/*public function uploadAvatar($file){
-		print_r($file);
-		if(!$this->isSecurity($file)) return false;
-		$ext = array_pop(explode(".",$file['name'])); // расширение
-		$new_name = time().".".$ext; // новое имя с расширением
-		$uploadfile="c:/Denwer/home/Alex/www/avatar/".$new_name;
-		$success=move_uploaded_file($file["tmp_name"], $uploadfile);
-		if($success)return $this->config->address."?view=user_profile_edit";//$this->db->setFieldOnId("users", $_SESSION["user_id"], "avatar", $new_name);
-		if(!$success) return $this->returnMessage("ERROR_AVATAR_UPLOAD", $this->config->address."?view=user_profile_edit");
-	}
-	protected function isSecurity($file){
-		$mime_types=array("image/png", "image/jpeg", "image/gif");
-		$blacklist=array(".php", ".phtml", ".php3", ".php4", ".html", "htm");
-		foreach($blacklist as $item){
-			if (preg_match("/$item\$/i", $file["name"])) return false;
-		}
-		$type=$file["type"];
-		for($i=0; $i< count($this->$mime_types); $i++){
-			if ($type==$this->$mime_types[$i]) break;
-			if ($i+1==count($this->$mime_types)) return false;
-		}
-		$size=$file["size"];
-		if($size>2048000) return false;
-		return true;
-	}*/
+	
 	public function getNewEmail(){
 		$ne = $this->data["new_email"];
 		if((!preg_match("/^[a-z0-9][a-z0-9\._-]*[a-z0-9]*@([a-z0-9]+([a-z0-9-]*[a-z0-9]+)*\.)+[a-z]+/i", $ne))){return $this->returnMessage("ERROR_USER_EMAIL", $this->config->address."?view=user_profile_edit");}
