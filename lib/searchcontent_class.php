@@ -1,0 +1,43 @@
+<?php
+require_once "modules_class.php";
+
+class SearchContent extends Modules{
+    private $words;
+
+    public function __construct($db){
+        parent::__construct($db);
+        $this->words=$this->data["words"];
+    }
+    protected function getTitle(){
+        return "Результаты поиска: ".$this->words;
+    }
+    protected function getDescription(){
+        return $this->words;
+    }
+    protected function getKeyWords(){
+        return mb_strtolower($this->words);
+    }
+    protected function getMiddle(){
+       $results=$this->article->searchArticles($this->words);
+        if($results===false) return $this->getTemplate("search_notfound");
+        for($i=0; $i<count($results); $i++){
+            $sr["link"]=$this->config->address."?view=article&amp;id=".$results[$i]["id"];
+            $sr["title"]=$results[$i]["title"];
+            $text .=$this->getReplaceTemplate($sr, "search_items");
+        }
+        $new_sr["search_items"]=$text;
+        return $this->getReplaceTemplate($new_sr, "search_result");
+    }
+    public function getFoundUsers($words){
+        $results=$this->user->searchUsers($words);
+        if($results===false) return $this->getTemplate("search_notfound");
+        for($i=0; $i<count($results); $i++){
+            $sr["link"]="";
+            $sr["title"]=$results[$i]["login"];
+            $text .=$this->getReplaceTemplate($sr, "search_items");
+        }
+        $new_sr["search_items"]=$text;
+        return $this->getReplaceTemplate($new_sr, "search_result");
+    }
+}
+?>
