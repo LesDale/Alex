@@ -133,6 +133,7 @@ class Manage{
 		}
 	}
 	public function newArticleCompose(){
+		if($this->data["photos"]==""){return $this->returnMessage("ERROR_ART_PICTURE", $this->config->address . "?view=article_compose");}
 		foreach ($this->data["photos"] as $n => $fileBody) {
 			$fileName = time().$n; // генерируем название файла
 			$path="c:/Denwer/home/Alex/www/images/artimg/";
@@ -158,6 +159,7 @@ class Manage{
 		$fullart=$this->data["fullart"];
 		$result=$this->artcomp->addUserArticle($secid, $_SESSION["user_id"], $title, $prevtext, $artimg, $fullart, time());
 		if ($result) return $this->returnMessage("SUCCESS_COMPOSE_ART", $this->config->address . "?view=article_compose");
+		if(!$result) return $this->returnMessage("ERROR_ART_TEXT", $this->config->address . "?view=article_compose");
 	}
 	private function hashPassword($password){
 		return md5($password.$this->config->secret);

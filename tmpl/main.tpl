@@ -17,23 +17,8 @@
 <body>
 <div id="container">
      <header>
-		 <a href="./index.php" title="Главная сайта" id="logo"><img src="../images/kink.jpg" alt="Главная" title="" height="60"></a>
-		 <nav>
-			 <ul id="topmenu">
-				 <li>
-					 <a href="#"><span>Ссылка</span></a>
-				 </li>
-				 <li>
-					 <a href="#" class="active"><span>Ссылка</span></a>
-				 </li>
-				 <li>
-					 <a href="#"><span>Ссылка</span></a>
-				 </li>
-				 <li>
-					 <a href="#"><span>Ссылка</span></a>
-				 </li>
-			 </ul>
-		 </nav>
+		 <a href="./index.php" title="Главная сайта" class="logo"><img src="../images/home.png" alt="Главная" title="" height="60"></a>
+		 <h2><Прудников Free News></h2>
 	 </header>
 	<div id="top">
 		<div class="clear"></div>

@@ -15,10 +15,10 @@ class UserMessageItem extends Modules{
         return "Личные сообщения";
     }
     protected function getDescription(){
-        return "Справочник функций по PHP.";
+        return "Новостной IT портал";
     }
     protected function getKeyWords(){
-        return "справочник php, справочник php функций";
+        return "новости it, справочник php функций";
     }
     protected function getTop(){
         $this->setAlreadyReadMessage();

@@ -1,1 +1,1 @@
-<div class="banner">%code%</div>
+<img class="banner" src="../images/%code%">

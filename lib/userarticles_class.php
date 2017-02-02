@@ -16,10 +16,10 @@ class UserArticles extends Modules{
         return "Записки сумасшедшего";
     }
     protected function getDescription(){
-        return "Справочник функций по PHP.";
+        return "Новостной IT портал";
     }
     protected function getKeyWords(){
-        return "справочник php, справочник php функций";
+        return "новости it, справочник php функций";
     }
     protected function getMiddle(){
         return $this->getUserArticles();

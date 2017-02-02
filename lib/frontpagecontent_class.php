@@ -13,14 +13,14 @@ class FrontPageContent extends Modules{
 		$this->db=$db;
 	}
 	protected function getTitle(){
-		if($this->page>1) return "Справочник по PHP - Страница ".$this->page;
-		else return "Справочник по PHP";
+		if($this->page>1) return "Прудников Free News - Страница ".$this->page;
+		else return "Прудников Free News";
 	}
 	protected function getDescription(){
-		return "Справочник функций по PHP.";
+		return "Новостной IT портал";
 	}
 	protected function getKeyWords(){
-		return "справочник php, справочник php функций";
+		return "новости it, справочник php функций";
 	}
 	protected function getTop(){
 		return $this->getTemplate("main_article");

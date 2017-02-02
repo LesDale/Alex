@@ -17,23 +17,11 @@ header {
 header a{
 	float: left;
 }
-#topmenu{
-	padding: 0;
+header h2{
+	margin: 12px 12px 12px 30px;
+	color: #858585;
 	float: left;
-	list-style: none;
-}
-#topmenu li{
-	float: left;
-}
-#topmenu a{
-	color: #fff;
-	display: block;
-	padding: 9px 7px 5px;
-	text-decoration: none;
-}
-#topmenu a:hover, #topmenu a.active{
-	background-color: #679b00;
-	border-radius: 2px;
+	font-size: 180%;
 }
 #top{
 	background-color: #d5d5d5;
@@ -141,6 +129,7 @@ header a{
 	margin: 0;
 }
 #main_article img{
+	margin: 0 10px 0 0;
 	float: left;
 	width: 200px;
 }
@@ -192,6 +181,7 @@ header a{
 .main .prev_article_img{
 	float: left;
 	width: 250px;
+	margin: 5px;
 }
 .main .prev_article_img img {
 	border: 2px solid #fff;
@@ -201,6 +191,7 @@ header a{
 .main .article_img{
 	float: left;
 	width: 250px;
+	margin: 5px;
 }
 .main .article_img img {
 	border: 2px solid #fff;
@@ -212,7 +203,6 @@ header a{
 }
 .main p{
 	color: #444953;
-	float: left;
 	margin: 10px 0 0 20px;
 	text-indent: 10px;
 }
@@ -255,9 +245,10 @@ header a{
 	margin: 0 230px;
 }
 .banner{
-	border: 1px solid #000;
-	margin: 10px auto 0;
+	margin: 5px;
 	width: 200px;
+	height: 200px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 #footer{
 	background: linear-gradient(180deg, #c9f76f 0%, #b9f73e 50%, #9fee00 51%, #86b32d 100%);
@@ -365,6 +356,7 @@ header a{
 }
 .user-info{
 	float: left;
+	margin: 5px;
 }
 #img{
 	float: left;
@@ -400,21 +392,33 @@ header a{
 .edit_link{
 	float: left;
 }
-.email_edit{
-	margin: 15px;
-}
 .email_edit dt{
 	float: left;
 	text-align: right;
 	color: #808080;
+	margin: 0 0 5px 0;
 }
 .email_edit dd{
 	float: left;
-	margin-left: 20px;
+	margin: 0 0 5px 15px;
+}
+#emailsub{
+	margin: 5px 0 0 0;
 }
 .user-email_edit{
 	float: left;
+	margin: 5px 5px 5px 15px;
 }
 .user-password_edit{
 	float: left;
+	margin: 5px 5px 5px 15px;
+}
+.user-password_edit div{
+	margin: 5px 0 5px 0;
+}
+.user-password_edit input[name="old_password"]{
+	margin-left: 21px;
+}
+.user-password_edit input[name="new_password"]{
+	margin-left: 29px;
 }

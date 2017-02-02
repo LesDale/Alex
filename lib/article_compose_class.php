@@ -5,6 +5,7 @@ class composeArticle extends GlobalClass{
         parent::__construct("articles", $db);
     }
     public function addUserArticle($secid, $user_id, $title, $prevtext, $artimg, $fullart, $date){
+        if($secid=="" or $user_id=="" or $title=="" or $prevtext=="" or $fullart==""){return false;}
         return $this->add(array("section_id"=>$secid, "user_id"=>$user_id, "title"=>$title, "intro_text"=>$prevtext, "article_images"=>$artimg, "full_text"=>$fullart, "meta_desc"=>$title, "date"=>$date));
     }
 }

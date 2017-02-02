@@ -13,7 +13,7 @@
     <input id="del_ava" name="delete_avatar" data-val="%avatar%" value="Удалить аватар" type="button"></p>
 </form>
 <form class="user-email_edit" method="post" action="functions.php" enctype="multipart/form-data">
-    <p >Редактировать e-mail</p><br />
+    <p >Редактировать e-mail</p>
     <p><dl class="email_edit">
         <dt>Текущий адрес:</dt>
         <dd>%user_email%</dd>

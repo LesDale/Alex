@@ -20,10 +20,10 @@ class UserMessages extends Modules{
         return "Личные сообщения";
     }
     protected function getDescription(){
-        return "Справочник функций по PHP.";
+        return "Новостной IT портал";
     }
     protected function getKeyWords(){
-        return "справочник php, справочник php функций";
+        return "новости it, справочник php функций";
     }
     protected function getUserMessages(){
         $text=str_replace("", "", $this->getTemplate("user_messages"));
